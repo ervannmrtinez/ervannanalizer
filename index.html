@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VannStore Remote Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><div><p class="eyebrow">VANNSTORE / DEVICE CONSOLE</p><h1>Remote Admin</h1><p class="muted">Dashboard perangkat terdaftar</p></div><span class="pill">CONSENT-BASED</span></header>
+  <main>
+    <section class="panel settings">
+      <h2>Koneksi API</h2>
+      <label>API base URL <input id="apiBase" value="http://127.0.0.1:5000" placeholder="https://api.domain-lo.com"></label>
+      <label>Bearer token <input id="apiToken" type="password" placeholder="Masukkan token API"></label>
+      <div class="actions"><button id="saveSettings">Simpan pengaturan</button><button class="secondary" id="refresh">Muat perangkat</button></div>
+      <p id="status" class="muted" role="status">Masukkan URL API dan token, lalu muat perangkat.</p>
+    </section>
+    <section class="panel">
+      <div class="section-head"><h2>Perangkat</h2><span id="count" class="muted">0 perangkat</span></div>
+      <div class="table-wrap"><table><thead><tr><th>Nama</th><th>Lokasi terakhir</th><th>Akurasi</th><th>Baterai</th><th>Terakhir online</th></tr></thead><tbody id="devices"><tr><td colspan="5" class="empty">Belum ada data.</td></tr></tbody></table></div>
+    </section>
+  </main>
+  <footer>VannStore • Gunakan hanya pada perangkat milik sendiri atau dengan persetujuan pengguna.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
